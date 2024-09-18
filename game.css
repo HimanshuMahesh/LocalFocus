@@ -166,6 +166,29 @@ a {
     }
 }
 
+/* Responsive Design for Mobile Devices */
+@media(max-width: 768px) {
+    .hero {
+        height: 60vh; /* Adjust height for smaller screens */
+        background-position: center; /* Ensure the image is centered */
+    }
+
+    .hero-content {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    h1 {
+        font-size: 2.5rem; /* Smaller font size for smaller screens */
+        margin-bottom: 10px;
+        margin-top: 20px;
+    }
+
+    .subtext {
+        font-size: 1rem; /* Smaller font size for smaller screens */
+        max-width: 90%; /* Adjust max width for smaller screens */
+    }
+}
+
 /* Info Button */
 .info-button {
     position: absolute;
@@ -184,6 +207,7 @@ a {
     cursor: pointer;
     z-index: 1001; /* Ensure it's on top */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add some shadow */
+    pointer-events: auto; /* Ensure button can be clicked */
 }
 
 /* Image Overlay */

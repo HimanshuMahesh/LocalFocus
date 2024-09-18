@@ -1,0 +1,183 @@
+/* style.css */
+body {
+  font-family: 'San Francisco', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+
+h1.title {
+  font-size: 36px;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+.bold-monospace-underline {
+  font-family: "Playwrite BE VLG", cursive;
+  font-weight: bold;
+  text-decoration: underline;
+  text-decoration-color: yellow; /* Yellow underline */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+.handwritten {
+  font-family: 'Great Vibes', cursive;
+  text-decoration: line-through; /* Strikethrough effect */
+  color: #ff5f57; /* Optional: color for "no bullshit" */
+}
+
+.task-manager {
+  font-family: 'San Francisco', sans-serif; 
+  font-weight: normal;
+  color: #ffffff;
+}
+
+.subtext {
+  font-size: 18px;
+  color: #b0b0b0;
+}
+
+.task-board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.task-column {
+  background-color: #1c1c1c;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  border: 2px solid #333;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.task-column:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+  font-size: 24px;
+  color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.task-list {
+  min-height: 250px;
+  padding: 10px;
+  border: 2px dashed #444;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.task {
+  background-color: #444;
+  border: 1px solid #555;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  cursor: grab;
+  font-size: 16px;
+  color: #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative; /* Make task container relative for absolute positioning of buttons */
+}
+
+/* style.css */
+
+/* Other styles remain unchanged */
+
+.task .action-buttons {
+  position: absolute;
+  right: 10px; /* Adjust space from the right */
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: row; /* Horizontal alignment of buttons */
+  gap: 8px; /* Space between buttons */
+}
+
+.task button {
+  width: 30px; /* Square button size */
+  height: 30px; /* Square button size */
+  border-radius: 5px; /* Rounded corners */
+  background-color: #ff5f57;
+  color: white;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 18px; /* Adjust font size for better visibility */
+  line-height: 1; /* Ensures text is vertically centered */
+  transition: background-color 0.3s ease;
+}
+
+.task button.done {
+  background-color: #4caf50; /* Green button for Done */
+}
+
+.task button.remove {
+  background-color: #ff5f57; /* Red button for Remove */
+}
+
+.task button:hover {
+  background-color: #ff3f3f;
+}
+
+.task button.done:hover {
+  background-color: #45a049;
+}
+
+
+
+
+#new-task {
+  width: calc(100% - 20px);
+  padding: 12px;
+  border: 2px solid #666;
+  border-radius: 8px;
+  margin-top: 10px;
+  background-color: #333;
+  color: #e0e0e0;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #8674C5; /* Purple background */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for glow effect */
+  box-shadow: 0 0 10px rgba(134, 116, 197, 0.5); /* Initial glow */
+}
+
+button:hover {
+  background-color: #705bb5; /* Darker purple on hover */
+  box-shadow: 0 0 15px rgba(134, 116, 197, 0.8), 0 0 30px rgba(134, 116, 197, 0.5); /* Enhanced glow on hover */
+}
+

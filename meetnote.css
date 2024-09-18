@@ -1,0 +1,182 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #121212;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+  width: 70%; /* Increased width for better real estate use */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.interactive {
+  font-family: 'Press Start 2P', cursive; /* Pixelated retro font */
+  color: #d3a6ff; /* Soft purple color */
+  margin-right: 10px;
+  text-shadow: 0 0 6px rgba(211, 166, 255, 0.6), 
+               0 0 12px rgba(211, 166, 255, 0.4), 
+               0 0 18px rgba(211, 166, 255, 0.2); /* Subtle purplish glow effect */
+  letter-spacing: 2px; /* Slight spacing for more retro look */
+  font-size: 2rem; /* Increase size for bold impact */
+  animation: glow 2s infinite alternate; /* Slightly slower pulsing glow effect */
+}
+
+/* Keyframes for glowing effect */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 6px rgba(211, 166, 255, 0.6), 
+                 0 0 12px rgba(211, 166, 255, 0.4), 
+                 0 0 18px rgba(211, 166, 255, 0.2);
+  }
+  to {
+    text-shadow: 0 0 10px rgba(211, 166, 255, 0.8), 
+                 0 0 20px rgba(211, 166, 255, 0.6), 
+                 0 0 30px rgba(211, 166, 255, 0.4);
+  }
+}
+
+
+.meeting-notes {
+  font-family: monospace; /* Monospace font for the bullet-point style */
+  text-decoration: underline;
+  position: relative;
+  margin-right: 10px;
+}
+
+.meeting-notes::before {
+  content: "• "; /* Bullet point */
+  color: #ffffff; /* Same color as the text */
+}
+
+.organizer {
+  font-family: 'Roboto Slab', serif; /* Tactile font with a serious tone */
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.sub{
+    margin: 0.5rem 0 1.5rem;
+    color: #e0e0e0; /* Lighter gray color for better visibility */
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
+    font-size: 1.1rem; /* Slightly larger font size for better readability */
+    line-height: 1.6; /* Increased line height for better spacing */
+    text-align: center; /* Center align the text */
+}
+
+p {
+  margin: 0.5rem 0 1.5rem;
+  color: #575757;
+}
+
+#noteInput {
+  width: 100%;
+  height: 150px; /* Increased height for a more spacious input */
+  padding: 15px;
+  border-radius: 8px;
+  border: none;
+  background-color: #333;
+  color: white;
+  font-size: 1.2rem;
+}
+
+#addNoteButton {
+  background-color: #6f5ba7; /* Darker purple color */
+  color: white;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 5px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 700; /* Bolder font */
+  width: 100%; /* Full width button */
+  box-shadow: 0 0 5px rgba(111, 91, 167, 0.5), 
+              0 0 10px rgba(111, 91, 167, 0.4); /* Reduced glowing effect */
+  transition: box-shadow 0.3s ease; /* Smooth transition */
+}
+
+#addNoteButton:hover {
+  box-shadow: 0 0 8px rgba(111, 91, 167, 0.7), 
+              0 0 15px rgba(111, 91, 167, 0.6); /* Slight glow increase on hover */
+}
+
+
+.note-wall {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  justify-content: center; /* Center align the notes */
+}
+
+.note {
+  background-color: #fdf4b2; /* Slightly more yellowish */
+  padding: 20px;
+  margin: 15px;
+  width: 250px; /* Slightly larger notes */
+  height: 170px;
+  border-radius: 10px;
+  color: #333; /* Darker text color */
+  cursor: grab;
+  font-family: 'Verdana', sans-serif; /* Modern sand-like font */
+  font-size: 1rem;
+  position: relative;
+}
+
+.note:hover {
+  opacity: 0.9;
+}
+
+.note p {
+  margin: 10px 0;
+}
+
+.timestamp {
+  font-size: 0.8rem;
+  color: gray;
+  font-family: monospace; /* Monospace for timestamp */
+}
+
+button.remove-btn {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  background-color: red;
+  border: none;
+  color: white;
+  width: 25px; /* Set width */
+  height: 25px; /* Set height */
+  border-radius: 50%; /* Make it circular */
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Center the 'X' */
+}
+
+button.remove-btn:hover {
+  background-color: darkred; /* Slight color change on hover */
+}
+
+/* Apply smooth scrolling to the note wall */
+#noteWall {
+  scroll-behavior: smooth;
+}

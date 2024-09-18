@@ -1,0 +1,7 @@
+The Task Manager Web App is a modern and intuitive tool designed to help users efficiently organize their tasks. It features a clean, drag-and-drop interface that allows users to manage tasks across three primary categories: To Do, In Progress, and Done. The app also includes functionality for marking tasks as completed or deleting them, with a user-friendly interface and clear, bold icons for easy task management.
+
+Key Features:
+
+Drag-and-Drop Interface: Easily move tasks between different categories (To Do, In Progress, Done) using a simple drag-and-drop mechanism.
+Task Management: Add new tasks, mark tasks as done, or delete them with straightforward button actions.
+Task Persistence: Tasks are saved locally in the browser, ensuring that your to-do list is preserved even when you close and reopen the app.

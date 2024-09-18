@@ -1,0 +1,310 @@
+/* Reset margin and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #1b1d1f; /* Darker background color */
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif; /* Modern font stack */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #1b1d1f; /* Darker background color */
+  color: #fff; /* Text color */
+}
+
+.container {
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.6); /* Darker glassmorphism effect */
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4); /* Enhanced glassmorphism effect */
+  max-width: 800px; /* Wider container */
+  width: 100%;
+  margin-top: 20px; /* Space above the container */
+}
+
+h1 {
+  font-size: 3rem; /* Larger title */
+  font-weight: 700; /* Bolder font */
+  color: #fff; /* Text color */
+  margin-bottom: 20px;
+  position: relative;
+  margin-top: -50px; /* Move title outside the box */
+  font-family: 'Press Start 2P', cursive; /* Retro cyberpunk font */
+}
+
+.description {
+  font-size: 1.2rem; /* Larger description */
+  color: #ccc; /* Slightly lighter text color */
+  margin-bottom: 30px;
+}
+
+.habits {
+  text-align: left;
+  list-style: none;
+}
+
+.habits li {
+  border-bottom: 1px solid #444; /* Darker border */
+  padding: 15px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  position: relative; /* For positioning delete button */
+}
+
+.habits label {
+  flex: 1;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.habits input {
+  margin-right: 15px;
+}
+
+.habits input {
+  display: none;
+}
+
+.habits input + label:before {
+  content: "+";
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%; /* Circular button */
+  background-color: #7a0bc0; /* Purple button color */
+  color: #fff; /* Text color */
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 30px; /* Center text vertically */
+  margin-right: 15px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.habits input + label span {
+  font-weight: 300;
+  font-size: 0.875rem;
+}
+
+.habits input:checked + label {
+  text-decoration: line-through;
+  color: #888; /* Dark mode text color */
+}
+
+.habits button {
+  padding: 10px 15px;
+  background: #7a0bc0; /* Purple button color */
+  margin: 5px 0;
+  outline: 0;
+  border: 0;
+  border-radius: 5px; /* Rectangular button */
+  box-shadow: 0 0 12px rgba(122, 11, 192, 0.5); /* Glowing effect */
+  color: #fff; /* Text color */
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.habits button:hover {
+  background-color: #8b1da9; /* Hover effect */
+}
+
+.add-habit {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #444; /* Darker border */
+}
+.add-habit .submit-button {
+  background-color: #7a0bc0; /* Purple color */
+  color: #fff; /* Text color */
+  font-size: 1rem;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(122, 11, 192, 0.5); /* Purple glow */
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.add-habit .submit-button:hover {
+  background-color: #8b1da9; /* Slightly lighter purple on hover */
+  box-shadow: 0 0 15px rgba(122, 11, 192, 0.7); /* Enhanced glow on hover */
+}
+
+
+.add-habit input,
+.add-habit select {
+  width: 100%;
+  padding: 12px;
+  margin: 5px 0;
+  outline: 0;
+  border: 0;
+  border-radius: 5px; /* Rectangular fields */
+  background-color: rgba(0, 0, 0, 0.6); /* Darker glassmorphism effect */
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4); /* Enhanced glassmorphism effect */
+  color: #fff; /* Text color */
+  font-size: 1rem;
+}
+
+.frequency {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space items evenly */
+}
+
+.frequency label {
+  color: #fff; /* Text color */
+  font-size: 1rem;
+}
+
+.frequency select {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Darker glassmorphism effect */
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4); /* Enhanced glassmorphism effect */
+  color: #fff; /* Text color */
+  border: none;
+  border-radius: 5px; /* Rectangular select */
+  font-size: 1rem;
+}
+
+.count-tracker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.7); /* Darker background */
+  border-radius: 10px; /* Rounded corners for tracker */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4); /* Subtle shadow */
+  color: #fff; /* Text color */
+  font-size: 1.1rem; /* Slightly larger font */
+}
+
+.count-tracker span {
+  margin: 0 10px;
+}
+/* Hover effect for form inputs */
+.add-habit input:hover,
+.add-habit select:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Slight lightening on hover */
+  transition: background-color 0.3s ease;
+}
+
+/* Fade-in animation for added habits */
+.habits li {
+  opacity: 0;
+  animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Habit count scaling animation */
+#habit-count {
+  transition: transform 0.3s ease;
+}
+
+#habit-count.scaled {
+  transform: scale(1.2);
+}
+
+/* Wrapper for the layout */
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px; /* Space between sidebars and main content */
+}
+
+/* Styles for the left sidebar */
+.sidebar-left {
+  width: 30%; /* Increased width to match habit block */
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1); /* Light white background */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-right: 20px; /* Space between the sidebar and the habit tracker */
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between steps */
+}
+
+/* Styles for step container */
+.step-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between steps */
+}
+
+.step {
+  background-color: rgba(255, 255, 255, 0.2); /* Slightly lighter background for each step */
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  /* Make each step span the full width */
+  width: 100%;
+}
+
+.step h3 {
+  font-size: 1.2rem;
+  color: #fff; /* White text */
+  margin-bottom: 10px;
+}
+
+.step p {
+  font-size: 1rem;
+  color: #ccc; /* Grey text */
+  line-height: 1.6;
+  font-family: 'Courier New', Courier, monospace; /* Playful whiteboard-like font */
+}
+
+/* Styles for the right sidebar */
+.sidebar-right {
+  width: 30%; /* Increased width to match habit block */
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1); /* Light white background */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin-left: 20px; /* Space between the sidebar and the habit tracker */
+}
+
+.sidebar-right h2 {
+  font-size: 1.5rem;
+  color: #ccc; /* Grey color */
+  margin-bottom: 10px;
+}
+
+.sidebar-right blockquote {
+  font-size: 1rem;
+  color: #fff; /* White text */
+  border-left: 4px solid #7a0bc0; /* Purple border */
+  padding-left: 15px;
+  margin: 15px 0; /* Increased space between quotes */
+  font-style: italic;
+}
+

@@ -1,0 +1,228 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #121212; /* Dark theme */
+    color: #fff; /* Default text color */
+}
+
+h1 {
+    font-family: 'Abril Fatface', cursive; /* Heading font */
+    color: #fff;
+    font-size: 4rem;
+    margin-bottom: 20px;
+    letter-spacing: 5px; /* Spacing out the title */
+    margin-top: 40px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Glow effect */
+}
+
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #d3d3d3; /* Lighter font color for subtext */
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: url('869.jpg') no-repeat center center/cover;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dim the background */
+    z-index: 0;
+}
+
+.hero-content {
+    z-index: 1;
+    padding: 20px;
+}
+
+.subtext {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    color: #e0e0e0; /* Lighter subtext color */
+}
+
+/* View on GitHub Button */
+.btn {
+    background-color: #8674C5; /* Purple color */
+    color: #fff;
+    padding: 15px 40px;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    display: inline-block;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 0 0 15px rgba(134, 116, 197, 0.7); /* Glow effect on button */
+}
+
+.btn:hover {
+    background-color: #6e5ab1;
+    box-shadow: 0 0 25px rgba(134, 116, 197, 1); /* Intense glow on hover */
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 10%;
+    gap: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.feature-card {
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    width: 22%;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5); /* Elevate on hover */
+}
+
+/* Feature Card Colors */
+.feature-card:nth-child(1) {
+    background-color: #ffffff; /* White background */
+    color: #333;
+}
+
+.feature-card:nth-child(2) {
+    background-color: #f8d3e4; /* Pink background */
+    color: #333;
+}
+
+.feature-card:nth-child(3) {
+    background-color: #d8f7c2; /* Green background */
+    color: #333;
+}
+
+.feature-card:nth-child(4) {
+    background-color: #fef5c3; /* Light yellow */
+    color: #333;
+}
+
+.feature-card h2 {
+    font-size: 1.7rem;
+    color: #333;
+    margin-bottom: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.feature-card p {
+    font-size: 1rem;
+    color: #666; /* Light grey for card descriptions */
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.feature-card .btn {
+    background-color: #8674C5; /* Purple accent */
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease;
+}
+
+.feature-card .btn:hover {
+    background-color: #6e5ab1;
+}
+
+/* Responsive Design for Smaller Screens */
+@media(max-width: 1000px) {
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-card {
+        width: 80%;
+        margin-bottom: 30px;
+    }
+}
+
+/* Info Button */
+.info-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #fff; /* White background */
+    color: #8674C5; /* Purple font color */
+    border-radius: 50%; /* Round shape */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold; /* Bold font */
+    cursor: pointer;
+    z-index: 1001; /* Ensure it's on top */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add some shadow */
+}
+
+/* Image Overlay */
+.image-overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Make sure it's above everything else */
+}
+
+.image-overlay img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Footer styles */
+footer {
+    background-color: #000000;
+    color: #ffffff; /* White text color */
+    text-align: center; /* Center align text */
+    padding: 20px 0; /* Add some padding */
+    font-family: 'Montserrat', sans-serif; /* Use Montserrat font */
+    margin-top: 20px; /* Add margin to separate from previous content */
+}
+
+footer a {
+    color: #8674C5; /* Accent color for the link */
+    text-decoration: none; /* Remove underline from the link */
+    font-weight: 500; /* Medium font weight */
+}
+
+footer a:hover {
+    text-decoration: underline; /* Underline on hover */
+}

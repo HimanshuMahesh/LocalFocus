@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Meeting Notes Organizer</title>
+    <link rel="stylesheet" href="meetnote.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>
+            <span class="interactive">Interactive</span> 
+            <span class="meeting-notes">Meeting Notes</span> 
+            <span class="organizer">Organizer</span>
+        </h1>
+        
+        <span class="sub">
+            Effortlessly add and manage your meeting notes with this tool. You can create multiple notes, easily rearrange their positions by dragging and dropping, and remove any note with a simple click.
+        </span>
+        <textarea id="noteInput" placeholder="Enter your note here..."></textarea>
+        <button id="addNoteButton">Add Note</button>
+
+        <div id="noteWall" class="note-wall"></div>
+    </div>
+    <script src="meetnote.js"></script>
+</body>
+</html>

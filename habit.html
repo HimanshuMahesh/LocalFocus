@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="habit.css" />
+  <title>Habit Tracker</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sidebar-left">
+            <h2>How the Habit Tracker Works</h2>
+            <div class="step-container">
+              <div class="step">
+                <h3>Step 1</h3>
+                <p>Enter your habit</p>
+              </div>
+              <div class="step">
+                <h3>Step 2</h3>
+                <p>Enter the frequency and the time frame.</p>
+              </div>
+              <div class="step">
+                <h3>Step 3</h3>
+                <p>Check off habits as you complete them and monitor your progress.</p>
+              </div>
+            </div>
+          </div>
+          
+  
+      <div class="container">
+        <h1>HABITS</h1>
+        <p class="description">Track your daily habits and stay consistent!</p>
+  
+        <form class="add-habit">
+          <input
+            class="habit"
+            type="text"
+            name="habit"
+            placeholder="Enter Habit Name"
+            required
+          />
+          <input
+            type="number"
+            name="reps"
+            placeholder="# of Repetitions"
+            min="1"
+            required
+          />
+          <div class="frequency">
+            <label for="timeframe">Frequency: </label>
+            <select name="timeframe" id="timeframe">
+              <option value="Daily">Daily</option>
+              <option value="Weekly">Weekly</option>
+              <option value="Monthly">Monthly</option>
+              <option value="Yearly">Yearly</option>
+            </select>
+          </div>
+          <input class="submit-button" type="submit" value="+ Add Habit" />
+        </form>
+  
+        <div class="count-tracker">
+          <span>Total Habits: <span id="habit-count">0</span></span>
+        </div>
+  
+        <ul class="habits">
+          <li>Loading...</li>
+        </ul>
+      </div>
+  
+      <div class="sidebar-right">
+        <h2>Build Habits anon</h2>
+        <blockquote>
+          <p>"The best time to plant a tree was 20 years ago. The second best time is now." – Chinese Proverb</p>
+        </blockquote><br>
+        <blockquote>
+          <p>"It's not what we do once in a while that shapes our lives. It's what we do consistently." – Tony Robbins</p>
+        </blockquote><br>
+        <blockquote>
+          <p>"The secret of your future is hidden in your daily routine." – Mike Murdock</p>
+        </blockquote>
+      </div>
+    </div>
+  
+    <script src="habit.js"></script>
+  </body>
+  
+</html>

@@ -8,7 +8,8 @@ body {
 }
 
 h1 {
-    font-family: 'Abril Fatface', cursive; /* Heading font */
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
     color: #fff;
     font-size: 4rem;
     margin-bottom: 20px;

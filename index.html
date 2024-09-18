@@ -1,46 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Modern Task Manager</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ionicons@5.5.3/dist/ionicons.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playwrite+BE+VLG:wght@100..400&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Local Productivity Suite</title>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="game.css">
 </head>
 <body>
-  <div class="container">
-    <header>
-        <h1 class="title">
-          <span class="bold-monospace-underline">a straight to the point</span> 
-          <span class="handwritten">no bullshit</span> 
-          <span class="task-manager">task manager</span>
-        </h1>
-        <p class="subtext">A simple and intuitive drag-and-drop task manager to organize your to-dos, track in-progress tasks, and mark them as done.</p>
-      </header>      
-      
-    <div class="task-board">
-      <div class="task-column" id="todo">
-        <h2>To Do</h2>
-        <div class="task-list"></div>
-        <input type="text" id="new-task" placeholder="New Task..." />
-        <button id="add-task-btn">Add Task</button>
-      </div>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Local/Focus</h1>
+            <p class="subtext">A collection of streamlined productivity tools developed by @HimanshuMahesh, designed to enhance your workflow. Built with HTML, CSS, and JavaScript, this local solution ensures your privacy by using only local storage, avoiding external databases entirely.</p>
+            <a href="https://github.com/HimanshuMahesh" class="btn">Here's my GitHub</a>
+            <!-- Info Button -->
+            <div class="info-button" id="info-button">i</div>
+        </div>
+    </section>
 
-      <div class="task-column" id="in-progress">
-        <h2>In Progress</h2>
-        <div class="task-list"></div>
-      </div>
-
-      <div class="task-column" id="done">
-        <h2>Done</h2>
-        <div class="task-list"></div>
-      </div>
+    <!-- Image Overlay -->
+    <div class="image-overlay" id="image-overlay">
+        <img src="request1.png" alt="Request Image">
     </div>
-  </div>
 
-  <script src="script.js"></script>
+    <section class="features">
+        <div class="feature-card">
+            <h2>Meeting Notes Organizer</h2>
+            <p>Organize your meeting notes efficiently with a clean, intuitive interface.</p>
+            <a href="meetnote.html" class="btn">Explore</a>
+        </div>
+        <div class="feature-card">
+            <h2>Task Manager</h2>
+            <p>Manage and prioritize tasks with ease using this lightweight tool.</p>
+            <a href="index.html" class="btn">Explore</a>
+        </div>
+        <div class="feature-card">
+            <h2>Digital Journal</h2>
+            <p>Record your thoughts and ideas with this simple digital journal.</p>
+            <a href="journal.html" class="btn">Explore</a>
+        </div>
+        <div class="feature-card">
+            <h2>Habit Tracker</h2>
+            <p>Track and build productive habits to boost your daily performance.</p>
+            <a href="habit.html" class="btn">Explore</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>Website created by <a href="https://github.com/HimanshuMahesh" target="_blank">@HimanshuMahesh</a></p>
+    </footer>
+
+    <script src="game.js"></script>
 </body>
 </html>

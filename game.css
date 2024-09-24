@@ -8,12 +8,13 @@ body {
 }
 
 h1 {
-    font-family: 'Abril Fatface', cursive;
+    font-family: 'Montserrat', sans-serif;
     color: #fff;
     font-size: 4rem;
     margin-bottom: 20px;
-    letter-spacing: 3px; /* Spacing out the title */
+    letter-spacing: 5px; /* Spacing out the title */
     margin-top: 40px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Glow effect */
 }
 
 p {

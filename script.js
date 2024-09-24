@@ -4,6 +4,7 @@ const taskLists = document.querySelectorAll('.task-list');
 const addTaskButton = document.getElementById('add-task-btn');
 const newTaskInput = document.getElementById('new-task');
 
+
 // Add new task to "To Do" column
 addTaskButton.addEventListener('click', addTask);
 newTaskInput.addEventListener('keypress', function (e) {
@@ -11,6 +12,7 @@ newTaskInput.addEventListener('keypress', function (e) {
     addTask();
   }
 });
+
 
 // Add task function
 function addTask() {
@@ -21,6 +23,7 @@ function addTask() {
     saveTasks();
   }
 }
+
 
 // Create a new task element and add drag events
 function createTaskElement(text, columnId) {
@@ -38,6 +41,7 @@ function createTaskElement(text, columnId) {
   const actionButtons = document.createElement('div');
   actionButtons.classList.add('action-buttons');
 
+  
   // Add Remove button with bold X
   const removeButton = document.createElement('button');
   removeButton.innerHTML = '<strong>[x]</strong>'; // Bold X for remove
@@ -57,8 +61,10 @@ function createTaskElement(text, columnId) {
   });
   actionButtons.appendChild(doneButton);
 
+  
   task.appendChild(actionButtons);
 
+  
   // Add drag event listeners
   task.addEventListener('dragstart', dragStart);
   task.addEventListener('dragend', dragEnd);
@@ -68,6 +74,7 @@ function createTaskElement(text, columnId) {
   column.appendChild(task);
   updateTaskButton(); // Update button state
 }
+
 
 // Move task to "Done" column
 function moveTaskToDone(task) {
@@ -91,6 +98,7 @@ function dragStart() {
   draggedTask = this;
   setTimeout(() => (this.style.display = 'none'), 0);
 }
+
 
 function dragEnd() {
   setTimeout(() => {
@@ -160,6 +168,9 @@ function loadTasks() {
   const savedTasks = JSON.parse(localStorage.getItem('tasks'));
   if (!savedTasks) return;
 
+
+
+  
   Object.keys(savedTasks).forEach(columnId => {
     savedTasks[columnId].forEach(taskText => {
       createTaskElement(taskText, columnId);

@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+    
     // Intersection Observer for Card Fade-in Animations
     const featureCards = document.querySelectorAll('.feature-card');
 
@@ -29,6 +30,8 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(card);
     });
 
+
+    
     // Info Button Functionality
     const infoButton = document.getElementById('info-button');
     const imageOverlay = document.getElementById('image-overlay');
@@ -44,6 +47,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+
+
+    
     // Ensure the image overlay is hidden on page load
     imageOverlay.style.display = 'none';
 });

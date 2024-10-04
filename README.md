@@ -1,4 +1,4 @@
-# LocalFocus
+# Local/Focus
 ![Local Focus](localfocusimg.png)
 **LocalFocus** is a streamlined productivity suite I built using HTML, CSS, and JavaScript. It is designed to help you stay organized and focused with core productivity tools, all while ensuring your data remains local and private. By leveraging **local storage**, LocalFocus optimizes privacy by storing all user data directly in the browser—no external databases or servers required.
 
